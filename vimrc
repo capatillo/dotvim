@@ -23,22 +23,24 @@ call pathogen#helptags()
     set ruler  
       
     "Want a different map leader than \  
-    "set mapleader = ",";  
+    "set mapleader = ","  
       
     "Ever notice a slight lag after typing the leader key + command? This lowers  
-    "the timeout.  
-    set timeoutlen=500  
+    "the timeout. 500 
+    set timeoutlen=1000  
       
     "Switch between buffers without saving  
     set hidden  
       
     "Set the color scheme. Change this to your preference.  
     "Here's 100 to choose from: http://www.vim.org/scripts/script.php?script_id=625  
-    colorscheme twilight  
+"twilight / darkEx / anotherdark
+    colorscheme anotherdark  
       
     "Set font type and size. Depends on the resolution. Larger screens, prefer h20  
-    set guifont=Menlo:h14  
-      
+"    set guifont=Menlo:h14  
+     set guifont=Monaco:h12  
+     
     "Tab stuff  
     set tabstop=4  
     set shiftwidth=4  
@@ -52,7 +54,7 @@ call pathogen#helptags()
     set number  
       
     "Prefer relative line numbering?  
-    "set relativenumber"  
+    "set relativenumber
       
     "Indent stuff  
     set smartindent  
@@ -62,7 +64,7 @@ call pathogen#helptags()
     set laststatus=2  
       
     "Prefer a slightly higher line height  
-    set linespace=3  
+    set linespace=2  
       
     "Better line wrapping  
     set wrap  
@@ -95,7 +97,7 @@ call pathogen#helptags()
     nnoremap <leader>ft Vatzf  
       
     " Create dictionary for custom expansions  
-    " set dictionary+=/Users/jeff_way/.vim/dict.txt  
+    set dictionary+=~/.vim/dict.txt  
       
     "Opens a vertical split and switches over (\v)  
     nnoremap <leader>v <C-w>v<C-w>l  
@@ -118,7 +120,7 @@ call pathogen#helptags()
     "Shortcut for editing  vimrc file in a new tab  
     nmap <leader>ev :tabedit $MYVIMRC<cr>  
       
-    "Change zen coding plugin expansion key to shift + e  
+    "Change zen coding plugin expansion key to Ctrl + e  
     let g:user_zen_expandabbr_key = '<C-e>'  
       
     "Faster shortcut for commenting. Requires T-Comment plugin  
@@ -163,12 +165,13 @@ call pathogen#helptags()
     vmap <C-Down> xp`[V`]  
       
     " Source the vimrc file after saving it. This way, you don't have to reload Vim to see the changes.  
-    if has("autocmd")  
-     augroup myvimrchooks  
-      au!  
-      autocmd bufwritepost .vimrc source ~/.vimrc  
-     augroup END  
-    endif  
+"    if has("autocmd")  
+"     augroup myvimrchooks  
+"      au!  
+"      autocmd bufwritepost .vimrc source ~/.vimrc  
+"     augroup END  
+"    endif  
+      autocmd bufwritepost .vimrc source $MYVIMRC  
       
     " easier window navigation  
     nmap <C-h> <C-w>h  
@@ -180,13 +183,13 @@ call pathogen#helptags()
     "NERDTREE PLUGIN SETTINGS  
     "------------------------"  
     "Shortcut for NERDTreeToggle  
-    nmap <leader>nt :NERDTreeToggle <CR>  
+    nmap <leader>nt :NERDTreeToggle<CR>  
       
     "Show hidden files in NerdTree  
     let NERDTreeShowHidden=1  
       
     "autopen NERDTree and focus cursor in new document  
-    autocmd VimEnter * NERDTree  
+    "autocmd VimEnter * NERDTree  
     autocmd VimEnter * wincmd p  
       
     "Helpeful abbreviations  
