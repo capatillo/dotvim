@@ -40,9 +40,9 @@ call pathogen#helptags()
     set guifont=Menlo:h14  
       
     "Tab stuff  
-    set tabstop=3  
-    set shiftwidth=3  
-    set softtabstop=3  
+    set tabstop=4  
+    set shiftwidth=4  
+    set softtabstop=4  
     set expandtab  
       
     "Show command in bottom right portion of the screen  
@@ -95,7 +95,7 @@ call pathogen#helptags()
     nnoremap <leader>ft Vatzf  
       
     " Create dictionary for custom expansions  
-    set dictionary+=/Users/jeff_way/.vim/dict.txt  
+    " set dictionary+=/Users/jeff_way/.vim/dict.txt  
       
     "Opens a vertical split and switches over (\v)  
     nnoremap <leader>v <C-w>v<C-w>l  
@@ -136,7 +136,7 @@ call pathogen#helptags()
     " More useful command-line completion  
     set wildmenu  
       
-    "Auto-completion menu  
+    "+ Auto-completion menu  
     set wildmode=list:longest  
       
     "http://vim.wikia.com/wiki/Make_Vim_completion_popup_menu_work_just_like_in_an_IDE  
