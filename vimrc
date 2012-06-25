@@ -230,3 +230,6 @@ call pathogen#helptags()
       
     " print empty <a> tag  
     map! ;h <a href=""></a><ESC>5hi
+
+	nmap <leader>z :-1r !date "+- \%Y-\%m-\%d \%H:\%M:\%S ---------------------------------------------------------"<CR>:star!<CR><CR><CR><CR><Up>
+
